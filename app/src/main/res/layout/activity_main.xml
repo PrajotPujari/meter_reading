@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        >
+
+        <Button
+            android:id="@+id/date_picker"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bgdatepicker"
+            android:text="Date" />
+
+        <EditText
+            android:id="@+id/date_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_picker"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Date"
+
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/amount_of_fuel"
+            app:layout_constraintTop_toTopOf="@+id/date_picker"
+            tools:layout_editor_absoluteX="100dp" />
+
+
+        <EditText
+            android:id="@+id/fuel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_of"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Fuel"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp" />
+
+
+        <EditText
+            android:id="@+id/amount_of_fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_of"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@+id/fuel"
+            android:ems="10"
+            android:hint="Amount"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp" />
+
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/button1"
+            android:layout_below="@+id/amount_of_fuel"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        
+
+        <EditText
+            android:id="@+id/cng_petrol"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:ems="10"
+            android:hint="CNG/PETROL"
+            android:inputType="text"
+            android:alpha="0"
+            app:layout_constraintBottom_toTopOf="@+id/button1"
+            app:layout_constraintTop_toTopOf="@+id/fuel"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp" />
+
+        <EditText
+            android:id="@+id/meter_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amount_of_fuel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@+id/spinner1"
+            android:ems="10"
+            android:hint="Meter Reading"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp" />
+
+
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meter_reading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="172dp"
+            android:background="@drawable/bgbtnblack"
+            android:text="Submit"
+            tools:layout_editor_absoluteX="161dp" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:alpha="0"
+
+            android:hint=""
+            android:inputType="number"
+           />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/menu_navigation">
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

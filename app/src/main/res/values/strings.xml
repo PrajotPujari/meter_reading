@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">mycar</string>
+
+    <string-array name="numbers">
+
+        <item>Cng</item>
+        <item>Petrol</item>
+
+    </string-array>
+</resources>
